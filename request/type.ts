@@ -2,7 +2,7 @@ import type { AxiosError, AxiosRequestConfig, AxiosRequestHeaders, AxiosResponse
 
 // 针对AxiosRequestConfig配置进行扩展
 export interface ZXInterceptors<T = AxiosResponse> {
-  requestSuccessFn?: (config: ZXRequestConfig) => ZXRequestConfig
+  requestSuccessFn?: (config: ZXRequestConfig) => any
   requestFailureFn?: (err: AxiosError) => any
   responseSuccessFn?: <T = AxiosResponse>(res: T) => T
   responseFailureFn?: (err: AxiosError) => any
